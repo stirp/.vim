@@ -7,3 +7,12 @@
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = git@github.com:majutsushi/tagbar.git
+[submodule "bundle/taghighlight-automirror"]
+	path = bundle/taghighlight-automirror
+	url = git@github.com:abudden/taghighlight-automirror.git
+[submodule "bundle/vim-javacomplete2"]
+	path = bundle/vim-javacomplete2
+	url = git@github.com:artur-shaik/vim-javacomplete2.git
+[submodule "bundle/vim-rooter"]
+	path = bundle/vim-rooter
+	url = git@github.com:airblade/vim-rooter.git
