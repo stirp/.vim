@@ -16,3 +16,12 @@
 [submodule "bundle/vim-rooter"]
 	path = bundle/vim-rooter
 	url = git@github.com:airblade/vim-rooter.git
+[submodule "bundle/AutoComplPop"]
+	path = bundle/AutoComplPop
+	url = git@github.com:vim-scripts/AutoComplPop.git
+[submodule "bundle/vim-snippets"]
+	path = bundle/vim-snippets
+	url = git@github.com:honza/vim-snippets.git
+[submodule "bundle/ultisnips"]
+	path = bundle/ultisnips
+	url = git@github.com:SirVer/ultisnips.git
