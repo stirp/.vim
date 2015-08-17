@@ -1,3 +1,9 @@
+let g:pathogen_disabled = []
+
+if v:version < '704' " 在7.4以前的版本禁用ultisnips
+    call add(g:pathogen_disabled, 'ultisnips')
+endif
+
 execute pathogen#infect()
 
 " Use Vim settings, rather than Vi settings (much better!).
