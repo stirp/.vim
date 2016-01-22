@@ -55,7 +55,8 @@ inoremap <HOME> <ESC>^i
 " javacomplete2
 autocmd FileType java set omnifunc=javacomplete#Complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-autocmd FileType java call javacomplete#StartServer()
+" autocmd FileType java call javacomplete#StartServer()
+" autocmd FileType java call javacomplete#JCserverStart()
 autocmd FileType java nnoremap <C-S-O> call javacomplete#AddImport()<cr>
 set completeopt=longest,menu
 " let g:UltiSnipsExpandTrigger="<tab>"
@@ -112,22 +113,22 @@ set showmatch
 " 匹配括号高亮的时间（单位是十分之一秒）  
 set matchtime=1  
 
-inoremap ( ()<ESC>i
-inoremap ) <c-r>=ClosePair(')')<CR>
-inoremap { {<CR>}<ESC>O
-inoremap } <c-r>=ClosePair('}')<CR>
-inoremap [ []<ESC>i
-inoremap ] <c-r>=ClosePair(']')<CR>
-inoremap " ""<ESC>i
-inoremap ' ''<ESC>i
-inoremap < <><ESC>i
-function! ClosePair(char) " 用于防止重复输入闭合框
-    if getline('.')[col('.') - 1] == a:char
-        return "\<Right>"
-    else  
-       return a:char 
-    endif  
-endfunc
+"inoremap ( ()<ESC>i
+"inoremap ) <c-r>=ClosePair(')')<CR>
+"inoremap { {<CR>}<ESC>O
+"inoremap } <c-r>=ClosePair('}')<CR>
+"inoremap [ []<ESC>i
+"inoremap ] <c-r>=ClosePair(']')<CR>
+"inoremap " ""<ESC>i
+"inoremap ' ''<ESC>i
+"inoremap < <><ESC>i
+"function! ClosePair(char) " 用于防止重复输入闭合框
+"    if getline('.')[col('.') - 1] == a:char
+"        return "\<Right>"
+"    else  
+"       return a:char 
+"    endif  
+"endfunc
 
 " space 选中待选
 "inoremap <expr> <Space> MayComplete()
