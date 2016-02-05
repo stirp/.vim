@@ -1,16 +1,18 @@
 #README
 
-ÕâÊÇÎÒ×Ô¼ºµÄ vim ÅäÖÃÎÄ¼ş£¬Ö÷ÒªÕë¶ÔµÄÊÇĞ´ Java ´úÂëµÄÅäÖÃ¡£Ê¹ÓÃµÄÊÇ pathogen ½øĞĞ²å¼ş¹ÜÀí£¬ÆäËû¹¤¾ßµÄÊ¹ÓÃÔ­ÀíÊÇÀàËÆµÄ¡£²å¼şµÄ°²×°ÊÇÍ¨¹ı git ½øĞĞµÄ£¬ËùÓĞ²å¼ş¶¼ÊÇ×ÓÏîÄ¿£¬Òò´Ë¸üĞÂ²å¼şÊ±Ö´ĞĞ git submodule update »òÕß git submodule foreach git pull ¾Í×ã¹»ÁË¡£
+è¿™æ˜¯æˆ‘è‡ªå·±çš„ vim é…ç½®æ–‡ä»¶ï¼Œä¸»è¦é’ˆå¯¹çš„æ˜¯å†™ Java ä»£ç çš„é…ç½®ã€‚ä½¿ç”¨çš„æ˜¯ pathogen è¿›è¡Œæ’ä»¶ç®¡ç†ï¼Œå…¶ä»–å·¥å…·çš„ä½¿ç”¨åŸç†æ˜¯ç±»ä¼¼çš„ã€‚æ’ä»¶çš„å®‰è£…æ˜¯é€šè¿‡ git è¿›è¡Œçš„ï¼Œæ‰€æœ‰æ’ä»¶éƒ½æ˜¯å­é¡¹ç›®ï¼Œå› æ­¤æ›´æ–°æ’ä»¶æ—¶æ‰§è¡Œ git submodule update æˆ–è€… git submodule foreach git pull å°±è¶³å¤Ÿäº†ã€‚
 
-ÓÉÓÚÎÒµÄÊ¹ÓÃ»·¾³ÖĞÃ»ÓĞ gvim£¬Òò´ËÃ»ÓĞ¹ØÓÚ gui µÄÅäÖÃ¡£¶øÇÒÓÉÓÚÎÒµÄÊ¹ÓÃ»·¾³±È½ÏÒ»ÖÂ£¬vim µÄ¹¦ÄÜÏî¶¼Ö§³Ö£¬ËùÒÔÃ»ÓĞÀàËÆ autocmd µÄÅĞ¶Ï£¬Õâ¿ÉÄÜÔÚÊ¹ÓÃÖĞ²¢²»ÊÊÓÃËùÓĞÈË¡£
+ç”±äºæˆ‘çš„ä½¿ç”¨ç¯å¢ƒä¸­æ²¡æœ‰ gvimï¼Œå› æ­¤æ²¡æœ‰å…³äº gui çš„é…ç½®ã€‚è€Œä¸”ç”±äºæˆ‘çš„ä½¿ç”¨ç¯å¢ƒæ¯”è¾ƒä¸€è‡´ï¼Œvim çš„åŠŸèƒ½é¡¹éƒ½æ”¯æŒï¼Œæ‰€ä»¥æ²¡æœ‰ç±»ä¼¼ autocmd çš„åˆ¤æ–­ï¼Œè¿™å¯èƒ½åœ¨ä½¿ç”¨ä¸­å¹¶ä¸é€‚ç”¨æ‰€æœ‰äººã€‚
 
-Ê¹ÓÃÇ°ĞèÒª°²×° JDK(8¿Ï¶¨¿ÉÒÔÓÃ£¬ÒÔÏÂÃ»ÓĞÊÔ¹ı) ºÍ maven,·ñÔò Java µÄ²¹È«¹¦ÄÜÊÜÓ°Ïì¡£
+ä½¿ç”¨å‰éœ€è¦å®‰è£… JDK(8è‚¯å®šå¯ä»¥ç”¨ï¼Œä»¥ä¸‹æ²¡æœ‰è¯•è¿‡) å’Œ maven,å¦åˆ™ Java çš„è¡¥å…¨åŠŸèƒ½å—å½±å“ã€‚
 
-Ê¹ÓÃÁË autoComplPop¡¢supertab¡¢taghighlight-automirror¡¢vim-javacomplete2 ¡¢vim-snippetsn¡¢nerdtree¡¢tagbar¡¢ultisnips¡¢vim-rooter µÈ²å¼ş¡£
+ä½¿ç”¨äº† autoComplPopã€supertabã€taghighlight-automirrorã€vim-javacomplete2 ã€vim-snippetsnã€nerdtreeã€tagbarã€ultisnipsã€vim-rooter ç­‰æ’ä»¶ã€‚
 
-°²×°·½Ê½£º
+å®‰è£…æ–¹å¼ï¼š
 
 	cd ~
-	git clone
-	git@github.com:stirp/.vim
-	ln -s .vim/.vimrc .vimrc
+	git clone git@github.com:stirp/.vim
+	cd .vim
+	git submodule init
+	git submodule update
+	ln -s ~/.vim/.vimrc ~/.vimrc
