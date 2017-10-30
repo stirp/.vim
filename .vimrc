@@ -59,10 +59,6 @@ autocmd FileType java setlocal omnifunc=javacomplete#Complete
 " autocmd FileType java call javacomplete#JCserverStart()
 autocmd FileType java nnoremap <C-S-O> call javacomplete#AddImport()<cr>
 set completeopt=longest,menu
-" let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-let g:UltiSnipsEditSplit="vertical"
 
 autocmd InsertLeave * se nocul  " 用浅色高亮当前行    
 autocmd InsertEnter * se cul    " 用浅色高亮当前行
