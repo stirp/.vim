@@ -11,6 +11,9 @@ execute pathogen#infect()
 set nocompatible
 
 syntax on " 语法高亮
+hi Pmenu ctermfg=DarkGray ctermbg=DarkBlue cterm=None guifg=Cyan guibg=DarkBlue
+hi PmenuSel ctermfg=Black ctermbg=White cterm=None guifg=Cyan guibg=White
+
 filetype plugin indent on " 文件类型检测 文件类型缩进
 
 " allow backspacing over everything in insert mode
@@ -31,12 +34,14 @@ autocmd BufReadPost *
             \ endif " When editing a file, always jump to the last known cursor position.
 
 " 色彩控制
-" autocmd Filetype java,javascript colorscheme torte
+autocmd Filetype java,javascript colorscheme torte
+
+set omnifunc=syntaxcomplete#Complete
 
 "tagbar
 nmap <F8> :TagbarToggle<CR>
 let g:tagbar_width = 30
-" autocmd VimEnter * nested :call tagbar#autoopen(1) " 打开vim的时候自动打开tagbar
+autocmd VimEnter * nested :call tagbar#autoopen(1) " 打开vim的时候自动打开tagbar
 let g:tagbar_right = 1
 
 "nerdtree
@@ -52,16 +57,10 @@ set expandtab
 nnoremap <HOME> ^
 inoremap <HOME> <ESC>^i
 
-" javacomplete2
-autocmd FileType java set omnifunc=javacomplete#Complete
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
-" autocmd FileType java call javacomplete#StartServer()
-" autocmd FileType java call javacomplete#JCserverStart()
-autocmd FileType java nnoremap <C-S-O> call javacomplete#AddImport()<cr>
-set completeopt=longest,menu
+set completeopt=longest,menuone
 
-autocmd InsertLeave * se nocul  " 用浅色高亮当前行    
-autocmd InsertEnter * se cul    " 用浅色高亮当前行
+"autocmd InsertLeave * se nocul  " 用浅色高亮当前行    
+"autocmd InsertEnter * se cul    " 用浅色高亮当前行
 
 " inoremap <expr> <CR>   MaySelect()
 function MaySelect()
@@ -70,15 +69,6 @@ function MaySelect()
         return "\<DOWN>"
     endif
     return "\<TAB>"
-endfunc
-
-" inoremap <expr> <C-Space> MayComplete()
-func MayComplete()
-    if (pumvisible() && g:pumselect)
-        let g:pumselect = 0
-        return "\<CR>"
-    endif
-    return "\<Space>"
 endfunc
 
 " inoremap <expr> <C-CR> StateChangeEnter()
@@ -125,9 +115,6 @@ set matchtime=1
 "       return a:char 
 "    endif  
 "endfunc
-
-" space 选中待选
-"inoremap <expr> <Space> MayComplete()
 
 autocmd Filetype java,javascript,jsp inoremap <buffer>  .  .<C-X><C-O><C-P>
 autocmd Filetype java,javascript,css,html,xml inoremap <buffer>  A  A<C-X><C-O><C-P>
