@@ -34,7 +34,7 @@ autocmd BufReadPost *
             \ endif " When editing a file, always jump to the last known cursor position.
 
 " 色彩控制
-autocmd Filetype java,javascript colorscheme torte
+" autocmd Filetype java,javascript colorscheme torte
 
 set omnifunc=syntaxcomplete#Complete
 
@@ -57,7 +57,7 @@ set expandtab
 nnoremap <HOME> ^
 inoremap <HOME> <ESC>^i
 
-set completeopt=longest,menuone
+set completeopt=longest,menu
 
 "autocmd InsertLeave * se nocul  " 用浅色高亮当前行    
 "autocmd InsertEnter * se cul    " 用浅色高亮当前行
